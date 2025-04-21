@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 //Import Components
 import Controls from "./Controls";
@@ -26,6 +26,10 @@ function Player() {
 	const [isLibraryOpen, setisLibraryOpen] = useState(false);
 	const [isQueueOpen, setisQueueOpen] = useState(false);
 	const [toasts, setToasts] = useState([]);
+
+	useEffect(() => {
+		document.documentElement.style.removeProperty("--bg-color");
+	}, []);
 
 	const timeUpdateHandler = (e) => {
 		const current = e.target.currentTime;

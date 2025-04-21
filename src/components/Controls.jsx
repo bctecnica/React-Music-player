@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faPlay,
@@ -40,15 +40,27 @@ const Player = ({
 		setSongs(newSongs);
 	};
 
+	useEffect(() => {
+		document.documentElement.style.setProperty(
+			"--track-color",
+			currentSong.color[0]
+		);
+		document.documentElement.style.setProperty(
+			"--thumb-color",
+			currentSong.color[1]
+		);
+	}, [currentSong]);
+
 	const trackAnim = {
 		transform: `translateX(${songInfo.animationPercentage}%)`,
 	};
-	//Event Handlers
+
 	function getTime(time) {
 		return (
 			Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
 		);
 	}
+
 	const dragHandler = (e) => {
 		audioRef.current.currentTime = e.target.value;
 		setSongInfo({ ...songInfo, currentTime: e.target.value });
@@ -69,6 +81,7 @@ const Player = ({
 			playAudio();
 		}
 	};
+
 	const skipTrackHandler = async (direction) => {
 		let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
 
@@ -95,6 +108,7 @@ const Player = ({
 		}
 		if (isPlaying) audioRef.current.play();
 	};
+
 	const changeVolume = (e) => {
 		let value = e.target.value;
 		audioRef.current.volume = value;

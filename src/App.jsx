@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/app.scss";
 
 //Import Components
@@ -11,6 +11,10 @@ import { LoginContext } from "./contexts/LoginContext";
 function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const [userName, setUserName] = useState("'I don't remember my name'");
+
+	useEffect(() => {
+		document.documentElement.style.setProperty("--bg-color", "#1a1a1a");
+	}, []);
 
 	return (
 		<LoginContext.Provider

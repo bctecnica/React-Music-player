@@ -59,6 +59,15 @@ const LibrarySong = ({
 		>
 			<div className="library-song__image">
 				<img src={cover} alt="" />
+				{active && isPlaying && (
+					<div className="library-song__playing">
+						<div className="box box1"></div>
+						<div className="box box2"></div>
+						<div className="box box3"></div>
+						<div className="box box4"></div>
+						<div className="box box5"></div>
+					</div>
+				)}
 			</div>
 			<div className="library-song__description">
 				<h3>{name}</h3>

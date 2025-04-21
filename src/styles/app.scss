@@ -30,6 +30,8 @@
 
 body {
 	font-family: "Lato", sans-serif;
+	background-color: var(--bg-color);
+	transition: background-color 1s ease-out;
 }
 
 .application {
