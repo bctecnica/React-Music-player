@@ -28,7 +28,7 @@ const Nav = ({
 			</button>
 			<h1>Hey {userName}, enjoy my little react music app </h1>
 			<button
-				className={isQueueOpen ? "queue--open" : ""}
+				className={`nav__queue-trigger ${isQueueOpen ? "queue--open" : ""}`}
 				onClick={openQueueHandler}
 			>
 				Queue

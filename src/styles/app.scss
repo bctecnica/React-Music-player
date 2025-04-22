@@ -60,6 +60,20 @@ h4 {
 	font-weight: 400;
 }
 
+@media screen and (max-width: 768px) {
+	.library-active {
+		position: relative;
+		top: -18px;
+		margin-left: 67%;
+	}
+
+	.queue-active {
+		position: relative;
+		top: -6px;
+		margin-right: 5%;
+	}
+}
+
 @import "./animations";
 @import "./login";
 @import "./nav";

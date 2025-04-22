@@ -104,6 +104,19 @@
 			width: 340px;
 		}
 	}
+
+	.needle {
+		width: 12px;
+		height: 180px;
+
+		&__container {
+			left: 103%;
+		}
+	}
+
+	.circle-for-jazz {
+		width: 24px;
+	}
 }
 
 .rotateSong {
