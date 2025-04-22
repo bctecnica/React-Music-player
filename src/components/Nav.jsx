@@ -9,7 +9,7 @@ const Nav = ({
 	setisQueueOpen,
 	isQueueOpen,
 }) => {
-	const { userName } = useContext(LoginContext);
+	const { userName, previouslyLoggedIn } = useContext(LoginContext);
 	const openLibraryHandler = () => {
 		setisLibraryOpen(!isLibraryOpen);
 	};
@@ -26,7 +26,11 @@ const Nav = ({
 				Library
 				<FontAwesomeIcon icon={faMusic}></FontAwesomeIcon>
 			</button>
-			<h1>Hey {userName}, enjoy my little react music app </h1>
+			{previouslyLoggedIn ? (
+				<h1>Welcome back, {userName}</h1>
+			) : (
+				<h1>Hey {userName}, enjoy my little react music app </h1>
+			)}
 			<button
 				className={`nav__queue-trigger ${isQueueOpen ? "queue--open" : ""}`}
 				onClick={openQueueHandler}

@@ -24,10 +24,23 @@ nav {
 		}
 	}
 
-	.library--opened,
-	.queue--opened {
+	h1 {
+		padding-inline: 20px;
+		text-align: center;
+	}
+
+	.library--open,
+	.queue--open {
 		background: rgb(65, 65, 65);
 		color: white;
+	}
+
+	.queue--open {
+		margin-right: 15%;
+	}
+
+	.library--open {
+		margin-left: 15%;
 	}
 }
 
@@ -40,11 +53,6 @@ nav {
 		padding-inline: 16px;
 		button {
 			z-index: 10;
-		}
-
-		h1 {
-			padding-inline: 16px;
-			text-align: center;
 		}
 	}
 }
