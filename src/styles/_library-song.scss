@@ -116,3 +116,9 @@
 .box5 {
 	animation-name: quiet;
 }
+
+@media screen and (max-width: 768px) {
+	.library-song__image {
+		width: 25%;
+	}
+}

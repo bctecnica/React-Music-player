@@ -5,6 +5,7 @@ nav {
 	align-items: center;
 
 	button {
+		color: black;
 		background: transparent;
 		border: none;
 		cursor: pointer;
@@ -23,15 +24,15 @@ nav {
 		}
 	}
 
-	.library--open,
-	.queue--open {
+	.library--opened,
+	.queue--opened {
 		background: rgb(65, 65, 65);
 		color: white;
 	}
 }
 
 .nav__queue-trigger {
-	z-index: 11;
+	z-index: 2;
 }
 
 @media screen and (max-width: 768px) {

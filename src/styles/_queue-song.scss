@@ -37,3 +37,9 @@
 		color: white;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.queue-song__image {
+		width: 25%;
+	}
+}

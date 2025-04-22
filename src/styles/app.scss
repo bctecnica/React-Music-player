@@ -35,6 +35,7 @@ body {
 }
 
 .application {
+	overflow: clip;
 	transition: all 0.5s ease;
 }
 
@@ -61,17 +62,17 @@ h4 {
 }
 
 @media screen and (max-width: 768px) {
-	.library-active {
-		position: relative;
-		top: -18px;
-		margin-left: 67%;
-	}
+	// .library-active {
+	// 	position: relative;
+	// 	top: -18px;
+	// 	margin-left: 67%;
+	// }
 
-	.queue-active {
-		position: relative;
-		top: -6px;
-		margin-right: 5%;
-	}
+	// .queue-active {
+	// 	position: relative;
+	// 	top: -6px;
+	// 	margin-right: 5%;
+	// }
 }
 
 @import "./animations";

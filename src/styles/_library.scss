@@ -13,7 +13,7 @@
 	transition: all 0.5s ease;
 	opacity: 0;
 
-	&--open {
+	&--active {
 		transform: translateX(0%);
 		opacity: 1;
 	}
@@ -26,5 +26,12 @@
 @media screen and (max-width: 768px) {
 	.library {
 		width: 100%;
+
+		&--open {
+			position: absolute;
+			right: 16px;
+			top: 30px;
+			z-index: 12;
+		}
 	}
 }

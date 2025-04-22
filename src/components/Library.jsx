@@ -14,7 +14,7 @@ const Library = ({
 	onSongAddedToQueue,
 }) => {
 	return (
-		<div className={`library ${isLibraryOpen ? "library--open" : " "}`}>
+		<div className={`library ${isLibraryOpen ? "library--active" : " "}`}>
 			<h2 className="library__title">Library</h2>
 			<div className="library__songs">
 				{songs.map((song) => (

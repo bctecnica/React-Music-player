@@ -102,6 +102,7 @@
 	.song {
 		img {
 			width: 340px;
+			padding: 80px;
 		}
 	}
 
@@ -111,6 +112,10 @@
 
 		&__container {
 			left: 103%;
+		}
+
+		&--active {
+			rotate: 28deg;
 		}
 	}
 
